@@ -5,7 +5,7 @@
 //Метод Получения числа от пользователя
 int InputUser(string msg)
 {
-    System.Console.Write($"{msg}  --> ");
+    Console.Write($"{msg}  --> ");
     int userNumber = Convert.ToInt32(Console.ReadLine());
     return userNumber;
 }
@@ -47,4 +47,4 @@ int userInput = InputUser("Введи количество элементов м
 int[] myArray = new int[userInput];
 FillArray(myArray);
 ShowArray(myArray);
-System.Console.WriteLine($"Количество четных чисел в массиве = {ShowEvenNumberArray(myArray)}");
+Console.WriteLine($"Количество четных чисел в массиве = {ShowEvenNumberArray(myArray)}");
