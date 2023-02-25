@@ -5,18 +5,18 @@
 //Метод Получения числа от пользователя
 int InputUser(string msg)
 {
-    System.Console.Write($"{msg}  --> ");
+    Console.Write($"{msg}  --> ");
     int userNumber = Convert.ToInt32(Console.ReadLine());
     return userNumber;
 }
 
-//Метод заполнения массива случайными положительными  числами от 1 до 20
+//Метод заполнения массива случайными числами от -100 до 100
 int[] FillArray(int[] array)
 {
     Random random = new Random();
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = random.Next(1, 21);
+        array[i] = random.Next(-100, 100);
     }
     return array;
 }
@@ -32,7 +32,7 @@ int[] ShowArray(int[] array)
     return array;
 }
 
-//Метод показывает количество чётных чисел в массиве
+//Метод показывает сумму элементов стоящих на нечёных позициях
 int ShowSumOddPositionNumberArray(int[] array)
 {
     int result = 0;
@@ -47,4 +47,4 @@ int userInput = InputUser("Введи количество элементов м
 int[] myArray = new int[userInput];
 FillArray(myArray);
 ShowArray(myArray);
-System.Console.WriteLine($"Сумма элементов стоящих на нечетных позициях = {ShowSumOddPositionNumberArray(myArray)}");
+Console.WriteLine($"Сумма элементов массива стоящих на нечетных позициях = {ShowSumOddPositionNumberArray(myArray)}");
